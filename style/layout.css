@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* temp */
+    background-color: lightblue;
+}
+
+.page-wrapper{
+    width: 39rem;
+
+    /* temp */
+    background-color: lightcoral;
+}
+
+header{
+
+    /* temp */
+    height: 7.6rem;
+    border: solid 1px black;
+}
+
+main{
+
+    /* temp */
+    height: 253.1rem;
+    border: solid 1px black;
+}
+
+footer{
+
+    /* temp */
+    height: 17.8rem;
+    border: solid 1px black;
+}
