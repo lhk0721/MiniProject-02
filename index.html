@@ -18,8 +18,35 @@
 </head>
 <body>
     <div class="page-wrapper">
+        <h1 class="visually-hidden">HODU</h1>
         <header>
-            <h1 class="visually-hidden">HODU</h1>
+            <div class="header-container">
+                <img class="header__logo" src="./img/logo.svg" alt="HODU 로고">
+                <button class="header__menu-btn">
+                    <img class="header__menu-icon" src="./img/menu.svg" alt="메뉴 열기">
+                </button>
+            </div>
+            <nav class="header-nav nav-drawer">
+                <header class="nav-drawer__header">
+                    <button class="nav-drawer__close-btn">
+                        <img class="nav-drawer__close-icon" src="./img/arrow-right.svg" alt="내비게이션 닫기">
+                    </button>
+                </header>
+                <div class="nav-drawer__body">
+                    <ul class="nav-drawer__list">
+                        <li class="nav-drawer__item">
+                            <a class="nav-drawer__link" href="#">Home</a>
+                        </li>
+                        <li class="nav-drawer__item">
+                            <a class="nav-drawer__link" href="#">About</a>
+                        </li>
+                        <li class="nav-drawer__item">
+                            <a class="nav-drawer__link" href="#">Support</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-download">Download</button>
+                </div>
+            </nav>
         </header>
         <main>
             <section class="profile">
