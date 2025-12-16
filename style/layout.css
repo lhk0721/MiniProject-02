@@ -84,6 +84,34 @@ main{
     border: solid 1px black;
 }
 
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3.2rem;
+}
+
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 4rem 3.2rem 0;
+    gap: 2rem;
+}
+
+.hero__title{
+    margin: 0 2.53rem 0;
+}
+
+.hero__image{
+    width: 20.55rem;
+    height: 36.2rem;
+}
+
 footer{
 
     /* temp */
