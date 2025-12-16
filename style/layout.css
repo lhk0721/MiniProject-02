@@ -78,6 +78,10 @@ header{
 }
 
 main{
+    padding: 4rem 3.2rem 15.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
 
     /* temp */
     height: 253.1rem;
@@ -99,7 +103,6 @@ main{
     justify-content: center;
     align-items: center;
 
-    margin: 4rem 3.2rem 0;
     gap: 2rem;
 }
 
@@ -110,6 +113,29 @@ main{
 .hero__image{
     width: 20.55rem;
     height: 36.2rem;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    
+}
+
+.profile__image{
+    width: 32.6rem;
+    height: 19rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.8rem;
+}
+
+.profile__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 footer{
