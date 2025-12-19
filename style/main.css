@@ -91,3 +91,28 @@
     color: var(--color-text-accent);
     font-weight: var(--fw-bold);
 }
+
+/* subscribe section */
+.subscribe{
+    background-color: var(--color-bg-inverse);
+}
+
+.subscribe__text{
+    /* common features */
+    font-family: var(--font-base);
+    color: var(--color-text-inverse);
+}
+
+.subscribe__title{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+}
+
+.subscribe__description{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+}
+
+.subscribe__input-wrapper{
+    background-color: var(--color-bg-base);
+}

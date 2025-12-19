@@ -151,7 +151,7 @@ main::after{
         linear-gradient(#F2E9D899, #F2E9D899),
         url(/img/img_5.jpg);
     background-repeat: no-repeat, no-repeat;
-    background-position: center center, center 30%;
+    background-position: center center, center 24%;
     background-size: cover;
     
     /* SEO */
@@ -295,58 +295,73 @@ main::after{
     align-self: flex-end;
 }
 
+/* subscribe section */
+
 .subscribe{
-    width: 32.6rem;
-    padding: 3.6rem 3.2rem;
+    /* layout components */
     display: flex;
     flex-direction: column;
+
+    /* alignments */
     gap: 3rem;
+
+    /* box model */
+    width: 32.6rem;
+    padding: 3.6rem 3.2rem 3rem;
     border-radius: 1.8rem;
-
-    /* temp */
-    background-color: #263140;
-    color: #eee;
-
 }
 
 .subscribe__text{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     gap: 1.2rem;
+    text-align: left;
 }
 
 .subscribe__form{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* aalignment */
     gap: 1.6rem;
 }
 
 .subscribe__form button{
+    /* alignment */
     align-self: flex-end;
 }
 
 .subscribe__input-wrapper{
-    border-radius: 6rem;
-    background-color: ;
-    padding: 1.1rem 1.6rem;
+    /* layout context */
     display: flex;
+
+    /* alignment */
     align-items: center;
     gap: 1.2rem;
+    
+    /* box model */
+    border-radius: 6rem;
+    padding: 1.1rem 1.6rem;
+    
+    /* visual */
     cursor: text;
-
-    /* temp */
-    background-color: #FFFFFF;
 }
 
 .subscribe__input {
+    /* visual */
+    flex: 1;
     border: none;
     background: transparent;
     outline: none;
-    flex: 1;
 }
 
 
 .subscribe__input-wrapper:focus-within{
+    /* visual */
     outline: 2px solid #fff;
 }
 
