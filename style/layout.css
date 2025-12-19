@@ -110,14 +110,19 @@ body{
 }
 
 main{
-    padding: 4rem 3.2rem 15.8rem;
+    /* layout context */
     display: flex;
+    position: relative;
+
+    /* alignment */
     flex-direction: column;
     gap: 6rem;
 
+    /* box model */
+    padding: 4rem 3.2rem 15.8rem;
     overflow: hidden;
 
-    position: relative;
+    /* layer */
     z-index: 0;
 
     /* temp */
@@ -125,74 +130,100 @@ main{
 }
 
 main::after{
-    content: "";
+    /* layout context */
     position: absolute;
+
+    /* alignment */
     left: 0;
     right: 0;
     bottom: 0rem;
-    height: 24rem;
 
+    /* box model */
+    content: "";
+    height: 24rem;
+    
+    /* layer */
+    z-index: -1;
+
+    /* visual */
     background-image: 
         linear-gradient(#F2E9D899, #F2E9D899),
         url(/img/img_5.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center 30%;
     background-size: cover;
-
+    
+    /* SEO */
     pointer-events: none;
-    z-index: -1;
 }
 
+/* hero section */
 .hero{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     justify-content: center;
     align-items: center;
-
     gap: 3.2rem;
 }
 
 .hero__content{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     justify-content: center;
     align-items: center;
-
     gap: 2rem;
 }
 
 .hero__title{
+    /* box model */
     margin: 0 2.53rem 0;
 }
 
 .hero__image{
+    /* box model */
     width: 20.55rem;
     height: 36.2rem;
 }
 
+/* profile section */
 .profile{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     align-items: center;
     gap: 3.2rem;
-
-    
 }
 
 .profile__image{
+    /* box model */
     width: 32.6rem;
     height: 19rem;
+    border-radius: 1.8rem;
+
+    /* visual */
     object-fit: cover;
     object-position: center;
-    border-radius: 1.8rem;
 }
 
 .profile__text{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     gap: 1.6rem;
+    text-align: left;
 }
 
+/* gallery section */
 .gallery{
     display: flex;
     flex-direction: column;

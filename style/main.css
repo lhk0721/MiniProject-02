@@ -53,3 +53,20 @@ body{
     font-size: var(--fs-sm);
     color: var(--color-text-base);
 }
+
+/* profile section */
+.profile__text{
+    /* common features */
+    font-family: var(--font-base);
+    color: var(--color-text-base);
+}
+
+.profile__title{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+}
+
+.profile__description{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+}
