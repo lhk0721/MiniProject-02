@@ -165,8 +165,26 @@
         background-position: center center, center 40%;
     }
 
+    .footer__menu{
+        display: none;
+    }
 
+    .footer__brand{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
 
+    .footer__logo{
+        /* box model */
+        width: 22.6rem;
+        height: 7rem;
+    }
 
+    .footer__social-item{
+        /* layout context */
+        width: 4rem;
+        height: 4rem;
+    }
 
 }
