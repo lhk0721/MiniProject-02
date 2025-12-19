@@ -1,48 +1,63 @@
+/* layout context */
+    /* 해당 블록이 무엇인지 먼저 선언한다. position, display, flex|grid */
+/* alignment */
+    /* 자식 요소 배치 */
+/* box model */
+    /* 요소 자체의 물리적 크기와 여백 width,height, margin, padding */
+/* layer */
+/* visual */
+
+
 body{
+    /* layout context */
     display: flex;
+
+    /* alignment */
     flex-direction: column;
     align-items: center;
-
-    /* temp */
-    background-color: lightblue;
 }
 
 .page-wrapper{
+    /* box model */
     width: 39rem;
-
-    /* temp */
-    background-color: lightcoral;
 }
 
-header{
+.page-header{
+    /* layout context */
     display: flex;
+
+    /* alignment */
     align-items: center;
 
-    /* temp */
-    height: 7.6rem;
-    border: solid 1px black;
+    /* box model */
+    padding: 2.4rem 2rem;
 }
 
-.header-container{
+.page-header__inner{
+    /* layout context */
     display: flex;
+
+    /* alignment */
     justify-content: space-between;
     align-items: center;
 
+    /* box model */
     width: 100%;
-    margin: 0 2rem;
 }
 
-.header__logo{
+.page-header__logo{
+    /* box model */
     width: 9.2rem;
     height: 2.8rem;
 }
 
-.header__menu{
+.page-header__menu{
+    /* box model */
     width: 3.2rem;
     height: 3.2rem;
 }
 
-.header-nav.nav-drawer{
+.page-header__nav.nav-drawer{
     position: fixed;
     top: 0;
     right: -100%;
@@ -54,7 +69,6 @@ header{
     width: 29rem;
     
     /* temp */
-    background-color: beige;
     display: none;
 
 }
