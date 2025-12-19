@@ -2,6 +2,24 @@ body{
     text-align: center;
 }
 
-header{
+.btn{
+    font-family: var(--font-base);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sm);
+    color: var(--color-text-inverse);
+}
+
+.page-header{
     background-color: var(--color-bg-accent);
+}
+
+.page-header__nav.nav-drawer{
+    background-color:var(--color-bg-inverse);
+}
+
+.nav-drawer__list{
+    font-family: var(--font-base);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-md);
+    color: var(--color-text-inverse);
 }

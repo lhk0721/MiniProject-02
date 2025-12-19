@@ -58,38 +58,55 @@ body{
 }
 
 .page-header__nav.nav-drawer{
+    /* layout context */
     position: fixed;
     top: 0;
     right: -100%;
     
-    /* temp */
-    right: 0;
 
+    /* box model */
     height: 100vh;
     width: 29rem;
     
     /* temp */
+    right: 0;
     display: none;
 
 }
 
 .nav-drawer__header{
+    /* layout context */
+    display: flex;
+    justify-content: flex-start;
+
+    /* box model */
     padding: 2.2rem;
 }
 
 .nav-drawer__body{
-    padding: 4rem;
+    /* layout context */
     display: flex;
+
+    /* alignment */
     flex-direction: column;
     align-items:flex-start;
     gap: 5rem;
+    
+    /* box model */
+    padding: 4rem;
 }
 
 .nav-drawer__list{
-    margin-left: 1rem;
+    /* layout context */
     display: flex;
+
+    /* alignment */
     flex-direction: column;
     gap: 2.8rem;
+    text-align: left;
+
+    /* box model */
+    padding: 1rem;
 }
 
 main{
