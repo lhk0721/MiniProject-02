@@ -1,13 +1,11 @@
-body{
-    text-align: center;
-}
-
 /* common components */
 .btn{
     font-family: var(--font-base);
     font-weight: var(--fw-bold);
     font-size: var(--fs-sm);
     color: var(--color-text-inverse);
+
+    background-color: var(--color-primary);
 }
 
 /* page-header */
@@ -69,4 +67,27 @@ body{
 .profile__description{
     font-weight: var(--fw-regular);
     font-size: var(--fs-sm);
+}
+
+/* gallery section */
+.gallery__text{
+    /* common features */
+    font-family: var(--font-base);
+}
+
+.gallery__title{
+    color: var(--color-text-accent);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+}
+
+.gallery__description{
+    color: var(--color-text-base);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-md);
+}
+
+.gallery__description span{
+    color: var(--color-text-accent);
+    font-weight: var(--fw-bold);
 }

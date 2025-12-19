@@ -15,6 +15,7 @@ body{
     /* alignment */
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .page-wrapper{
@@ -225,55 +226,72 @@ main::after{
 
 /* gallery section */
 .gallery{
+    /* lqyout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     align-items: center;
     gap: 5rem;
 }
 
 .gallery__text{
-    text-align: center;
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     justify-content: center;
     align-items: center;
     gap: 1.6rem;
+    text-align: center;
 }
 
 .gallery__track{
+    /* layout context */
     display: flex;
+
+    /* alignment */
     gap: 2rem;
+
+    /* visual */
     transition: transfrom 0.4s ease;
 }
 
 .gallery__slide{
-    /* width: 26rem;
-    height: 26rem; */
+    /* box model */
+    border-radius: 1.8rem;
 
+    /* visual */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 80%;
     aspect-ratio: 1 / 1 ;
-    
-    border-radius: 1.8rem;
     overflow: hidden;
 }
 
 .gallery__slide img {
+    /* layout context */
+    display: block;
+    
+    /* box moel */
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .gallery__outro{
+    /* layout context */
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
 
+    /* alignment */
+    gap: 2.2rem;
+    text-align: left;
 }
 
 .gallery__outro button{
+    /* alignment */
     align-self: flex-end;
 }
 
