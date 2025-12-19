@@ -11,3 +11,39 @@
     font-weight: 700;
     font-display: swap;
 }
+
+/* variables */
+:root{
+    /* typography */
+
+    /* font-familly */
+    --font-base:'SpokaHanSansNeo', sans-serif;
+
+    /* font-weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* font-size */
+    --fs-xs: 1.2rem;
+    --fs-sm: 1.4rem;
+    --fs-md: 1.6rem;
+    --fs-lg: 2.2rem;
+    --fs-xl: 2.4rem;
+    --fs-xxl: 3.6rem;
+    --fs-xxxl: 4.8rem;
+
+    /* colors-text */
+    --color-text-base:#000000;
+    --color-text-inverse: #FFFFFF;
+    --color-text-accent:#D97652;
+    --color-text-muted:#767676;
+
+    --color-bg-base: #FFFFFF;
+    --color-bg-inverse: #263140;
+    --color-bg-accent: #F2E9D8;
+    --color-bg-muted: #F2E9D899;
+
+    /* colors-semantic (btn, icon) */
+    --color-primary:#D97652;
+    --color-icon-muted:#F29D52;
+}
