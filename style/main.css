@@ -2,6 +2,7 @@ body{
     text-align: center;
 }
 
+/* common components */
 .btn{
     font-family: var(--font-base);
     font-weight: var(--fw-bold);
@@ -9,10 +10,12 @@ body{
     color: var(--color-text-inverse);
 }
 
+/* page-header */
 .page-header{
     background-color: var(--color-bg-accent);
 }
 
+/* page-header__nav */
 .page-header__nav.nav-drawer{
     background-color:var(--color-bg-inverse);
 }
@@ -22,4 +25,31 @@ body{
     font-weight: var(--fw-bold);
     font-size: var(--fs-md);
     color: var(--color-text-inverse);
+}
+
+/* hero section */
+.hero{
+    /* main padding을 무시하고 hero 배경을 full-bleed로 확장 */
+    margin-top: -4rem;
+    margin-left: -3.2rem;
+    margin-right: -3.2rem;
+    padding-top: 4rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+
+    background-color: var(--color-bg-accent);
+}
+
+.hero__title{
+    font-family: var(--font-base);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+    color: var(--color-text-base);
+}
+
+.hero__description{
+    font-family: var(--font-base);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+    color: var(--color-text-base);
 }
