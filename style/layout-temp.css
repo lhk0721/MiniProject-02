@@ -91,6 +91,79 @@
         text-align: center;
     }
 
+    /* gallery section */
+    .gallery{
+        /* alignment */
+        gap: 8rem;
+    }
+
+    .gallery__text{
+        /* alignment */
+        gap: 3.6rem;
+        text-align: center;
+    }
+
+    .gallery__track{
+        /* alignment */
+        gap: 7.3rem;
+    }
+
+    .gallery__slide{
+        /* box model */
+        border-radius: 3rem;
+
+        /* visual */
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 29.5%;
+        aspect-ratio: 1 / 1 ;
+        overflow: hidden;
+    }
+
+    .gallery__outro{
+        /* layout context */
+        flex-direction: row;
+
+        /* alignment */
+        gap: 5.4rem;
+        text-align: left;
+        align-items: center;
+    }
+
+    .gallery__outro button{
+        /* alignment */
+        align-self: auto;
+    }
+
+    /* subscribe section */
+    .subscribe{
+        /* layout components */
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        /* alignments */
+        align-items: center;
+        gap: 14rem;
+
+        /* box model */
+        width: 128rem;
+        padding: 5rem 6rem;
+        border-radius: 1.8rem;
+    }
+
+    .subscribe__form button{
+        position: absolute;
+        transform: translate(-4%,12%);
+    }
+
+    .subscribe__input-wrapper{
+        padding: 1.9rem 1.6rem;
+    }
+
+    main::after{
+        background-position: center center, center 40%;
+    }
 
 
 
