@@ -1,26 +1,35 @@
+<!-- 
+메타 보강
+div 최소화
+h2는 섹션태그 바로 밑에다가.
+이미지 이름도 시맨틱하게
+z-index 구분 100단위로 떨어뜨리기.
+main.css margin padding 정리하기.
+-->
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-<meta charset="UTF-8" >
-<meta http-equiv="X-UA-Compatible" content="IE=edge" >
-<meta name="viewport" 
-    content="width=device-width, 
-        initial-scale=1.0, 
-        minimum-scale=1.0, 
-        maximum-scale=5.0, 
-        user-scalable=yes" >
-<meta 
-    name="description" 
-    content="고양이 호두(HODU)의 매력을 소개하는 공식 랜딩페이지. 사진과 이야기로 호두의 일상을 만나보세요."
->
-<title>Miniproject-02</title>
-<link rel="stylesheet" href="./style/reset.css">
-<link rel="stylesheet" href="./style/base.css">
-<link rel="stylesheet" href="./style/layout.css">
-<link rel="stylesheet" href="./style/componenets.css">
-<link rel="stylesheet" href="./style/main.css">
-<!-- temp -->
-<link rel="stylesheet" href="./style/temp.css">
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" 
+        content="width=device-width, 
+            initial-scale=1.0, 
+            minimum-scale=1.0, 
+            maximum-scale=5.0, 
+            user-scalable=yes" >
+    <meta 
+        name="description" 
+        content="고양이 호두(HODU)의 매력을 소개하는 공식 랜딩페이지. 사진과 이야기로 호두의 일상을 만나보세요."
+    >
+    <title>Miniproject-02</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/layout.css">
+    <link rel="stylesheet" href="./style/componenets.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <!-- temp -->
+    <link rel="stylesheet" href="./style/layout-temp.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -37,6 +46,14 @@
                 <button class="page-header__menu-btn">
                     <img class="page-header__menu-icon" src="./img/menu.svg" alt="메뉴 열기">
                 </button>
+                <nav class="page-header__nav-pc">
+                    <ul class="page-header__nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                    <button class="btn btn--primary">Download</button>
+                </nav>
             </div>
             <nav class="page-header__nav nav-drawer">
                 <header class="nav-drawer__header">

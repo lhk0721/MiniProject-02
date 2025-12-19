@@ -1,0 +1,36 @@
+/* @media screen and (min-width: 768px){} */
+
+@media screen and (min-width: 768px) {
+    .br-mobile{
+        display: none;
+    }
+
+    .page-wrapper{
+        max-width: 128rem;
+    }
+    
+
+    .page-header__menu-btn{
+        display: none;
+    }
+
+    .page-header__nav.nav-drawer{
+        display: none;
+    }
+
+    .page-header__nav-pc{
+        display: block;
+    }
+
+    .page-header__nav-pc{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .page-header__nav-list{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+}

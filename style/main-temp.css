@@ -1,0 +1,8 @@
+@media screen and (min-width: 768px) {
+    .page-header__nav-list{
+        font-family: var(--font-base);
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-md);
+        color: var(--color-text-base);
+    }
+}
