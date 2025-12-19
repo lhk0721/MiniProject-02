@@ -16,4 +16,13 @@
     .hero__description{
         font-size: var(--fs-md);
     }
+
+    /* profile section */
+    .profile__title{
+        font-size: var(--fs-xxl);
+    }
+
+    .profile__description{
+        font-size: var(--fs-md);
+    }
 }

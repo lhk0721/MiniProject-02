@@ -12,6 +12,10 @@
     .page-wrapper{
         max-width: 128rem;
     }
+
+    main{
+        padding: 4rem 0 15.8rem;
+    }
     
     /* header */
     .page-header__menu-btn{
@@ -67,6 +71,24 @@
     .hero__image{
         width: 41.5rem;
         height: 79.8rem;
+    }
+
+    /* profile section */
+    .profile{
+        flex-direction: row;
+        gap: 11rem;
+    }
+
+    .profile__text{
+        gap: 3.6rem;
+    }
+
+    .profile__image{
+        width: 66rem;
+        height: 39rem;
+    }
+    .profile__title{
+        text-align: center;
     }
 
 
