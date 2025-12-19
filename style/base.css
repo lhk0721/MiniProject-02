@@ -42,6 +42,7 @@
     --color-bg-inverse: #263140;
     --color-bg-accent: #F2E9D8;
     --color-bg-muted: #F2E9D899;
+    --color-bg-dim:rgba(0, 0, 0, 0.6);
 
     /* colors-semantic (btn, icon) */
     --color-primary:#D97652;

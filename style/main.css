@@ -116,3 +116,40 @@
 .subscribe__input-wrapper{
     background-color: var(--color-bg-base);
 }
+
+/* footer */
+.footer__nav{
+    font-family: var(--font-base);
+    color: var(--color-text-muted);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+}
+
+.footer__social-item{
+    background-color: var(--color-icon-muted);
+}
+
+/* modal */
+.modal__dim{
+    background-color: var(--color-bg-dim);
+}
+
+.modal{
+    background-color: var(--color-bg-accent);
+}
+
+.modal__content{
+    font-family: var(--font-base);
+}
+
+.modal__title{
+    color: var(--color-text-accent);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+}
+
+.modal__description{
+    color: var(--color-text-base);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+}

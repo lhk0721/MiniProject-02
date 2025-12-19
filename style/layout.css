@@ -125,9 +125,6 @@ main{
 
     /* layer */
     z-index: 0;
-
-    /* temp */
-    border: solid 1px black;
 }
 
 main::after{
@@ -367,62 +364,77 @@ main::after{
 
 
 footer{
-    /* temp */
-    height: 17.8rem;
-    border: solid 1px black;
+    /* layout context */
+    display: flex;
+
+    /* alignment */
+    justify-content: space-between;
+
+    /* box model */
     padding: 3rem;
 
-    display: flex;
-    justify-content: space-between;
 }
 
 .footer__brand{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     justify-content: space-between;
 }
 
 .footer__logo{
+    /* box model */
     width: 11.2rem;
     height: 3.4rem;
 }
 
 .footer__social{
+    /* layout context */
     display: flex;
-    gap: 1.6rem;
 
+    /* alignment */
+    gap: 1.6rem;
 }
 
 .footer__social-item{
+    /* layout context */
     position: relative;
 
+    /* box model */
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
-
-    /* temp */
-    background-color: #F29D52;
 }
 
 .footer__social-item img{
-    width: 1.6rem;
-    height: 1.6rem;
-
+    /* layout context */
     position: absolute;
+
+    /* alignment */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    /* box model */
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 .footer__menu{
-    text-align: right;
+    /* alignment */
     align-self: flex-end;
+    text-align: right;
     
 }
 
 .footer__nav{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     gap: 1rem;
 }
 
@@ -432,69 +444,77 @@ footer{
 }
 
 .modal__dim{
-    background-color: rgba(0, 0, 0, 0.6);
+    /* layout context */
     position: fixed;
-    z-index: 999;
 
+    /* alignment */
     inset: 0;
+
+    /* layer */
+    z-index: 999;
+    
+    /* box model */
     width: 100vw;
     height: 100vh;
 }
 
 .modal{
+    /* layout context */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
 
+    /* alignment */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    gap: 2.6rem;
+
+    /* box model */
     width: 30rem;
-    height: 30rem;
     border-radius: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
     
+    /* visual */
     background-image: url(/img/modal-bg-img.png);
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    gap: 2.6rem;
-
-    position: fixed;
+    /* layer */
     z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-    text-align: center;
-
-    /* temp */
-    background-color: #F2E9D8;
 }
 
 .modal__content{
-    
-
-
+    /* layout context */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+
+    /* alignment */
     align-items: center;
     gap: 2.2rem;
 }
 
 .modal__image{
+    /* box model */
     width: 6rem;
     height: 6rem;
 }
 
 .modal__text{
+    /* layout context */
     display: flex;
     flex-direction: column;
+
+    /* alignment */
     align-items: center;
     gap: 0.8rem;
 }
 
 .modal .btn{
+    /* alignment */
     align-self: center;
 }
 
