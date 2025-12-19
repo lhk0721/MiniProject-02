@@ -5,11 +5,15 @@
         display: none;
     }
 
+    .br-pc{
+        display: block;
+    }
+
     .page-wrapper{
         max-width: 128rem;
     }
     
-
+    /* header */
     .page-header__menu-btn{
         display: none;
     }
@@ -33,4 +37,41 @@
         align-items: center;
         gap: 3rem;
     }
+
+    /* hero section */
+    .hero{
+        /* layout context */
+        flex-direction: row;
+
+        /* alignment */
+        justify-content: space-between;
+        text-align: left;
+        gap: 13.1rem;
+    }
+
+    .hero__content{
+        /* layout context */
+        display: flex;
+        flex-direction: column;
+
+        /* alignment */
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .hero__title{
+        /* box model */
+        margin: 0;
+    }
+
+    .hero__image{
+        width: 41.5rem;
+        height: 79.8rem;
+    }
+
+
+
+
+
+
 }

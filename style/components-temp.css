@@ -1,0 +1,12 @@
+.btn{
+    /* layout context */
+    display: flex;
+
+    /* alignment */
+    justify-content: center;
+    align-items: center;
+
+    /* box model */
+    padding: 1.5rem 3rem;
+    border-radius: 4rem;
+}

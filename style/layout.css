@@ -7,6 +7,9 @@
 /* layer */
 /* visual */
 
+.br-pc{
+    display: none;
+}
 
 body{
     /* layout context */
