@@ -1,0 +1,35 @@
+/* @media screen and (min-width: 768px){} */
+
+@media screen and (min-width: 768px) {
+    .br-mobile{
+        display: none;
+    }
+
+    .page-header{
+        display: flex;
+    }
+
+    .page-header__menu-btn{
+        display: none;
+    }
+
+    .nav-drawer__header{
+        display: none;
+    }
+
+    .nav-drawer__body{
+        flex-direction: row;
+    }
+
+    .nav-drawer__list{
+        flex-direction: row;
+    }
+
+    .page-header__nav.nav-drawer{
+        /* layout  context*/
+        position: relative;
+        background-color: var(--color-bg-accent);
+        height: auto;
+        flex-direction: row;
+    }
+}
