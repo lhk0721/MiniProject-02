@@ -52,7 +52,7 @@ header, main, section, footer를 명확히 구분한다.
     }
     ```
 
-   visually-hidden 헤딩, 의미 있는 alt 텍스트, ARIA 속성을 적용해 접근성과 한다.
+   visually-hidden 헤딩, 의미 있는 alt 텍스트, ARIA 속성을 적용해 접근성을 확보 한다.
 
 
 ---
