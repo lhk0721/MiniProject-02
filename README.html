@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EC%9A%94">프로젝트 개요</h2>
+<h3 id="11-%EB%AA%A9%ED%91%9C">1.1 목표</h3>
+<p>본 프로젝트는 모바일 퍼스트 기준의 정적 랜딩 페이지를 HTML·CSS 중심으로 구현하는 퍼블리싱 프로젝트이다. 디자인 시안 기반으로 구조 설계, 레이아웃 구현, 컴포넌트 분리를 단계적으로 진행하며, 실제 실무 퍼블리싱 프로세스를 그대로 재현하는 것을 목표로 한다.</p>
+<p>시맨틱 마크업을 기본 원칙으로 header, main, section, footer 구조를 명확히 구분하고, 접근성을 고려한 heading 구조, visually-hidden 처리, 적절한 alt 텍스트와 ARIA 속성을 적용한다. 클래스 네이밍은 BEM 컨벤션을 사용해 역할과 책임이 드러나도록 설계한다.</p>
+<p>CSS는 reset, base, layout, main, components 단위로 분리하여 관리하며, 전역 디자인 토큰을 변수로 정의해 색상·타이포그래피·간격의 일관성을 유지한다. 레이아웃은 flexbox를 중심으로 구성하고, 미디어 쿼리를 통해 PC 환경까지 자연스럽게 확장 가능한 구조를 만든다.</p>
+<hr>
+<h3 id="12-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5">1.2 주요 기능</h3>
+<ul>
+<li>모바일 퍼스트 반응형 레이아웃 구현
+모바일 기준으로 구조를 설계하고 미디어 쿼리를 통해 PC 환경까지 확장한다. 동일한 마크업을 유지한 채 레이아웃만 전환되도록 구성한다.</li>
+</ul>
+<hr>
+<ul>
+<li>시맨틱 마크업 및 문서 구조 확보
+header, main, section, footer를 명확히 구분한다.</li>
+</ul>
+<table>
+  <tr>
+    <td>
+      <div style="display: flex; justify-content: center;">
+        <img src="./log/1-2 시맨틱 마크업.png">
+      </div>
+    </td>
+    <td>
+      <div style="display: flex; justify-content: center;">
+        <img width="600" src="./log/1-2 시멘틱 마크업(2).png">
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+<ul>
+<li>접근성 대응</li>
+</ul>
+<img src="./log/1-2 접근성 대응.png" alt="히어로 섹션" width="400">
+<pre><code>```HTML
+.visually-hidden{
+    position: absolute; (문서 흐름에서 제거)
+    width: 1px; (화면에 보이지 않도록 렌더 영역을 극소화)
+    height: 1px;
+    padding: 0; (초기화, 영역 생기는 것 방지)
+    margin: -1px; (1px 영역조차 화면에 남지 않도록)
+    overflow: hidden; (박스 밖에서도 보이지 않게)
+    clip: rect(0, 0, 0, 0); (시각적으로 완전 비노출 상태)
+    white-space: nowrap; (줄바꿈으로 인해 렌더링 영역이 생기는 것을 방지)
+    border: 0; (테두리 방지)
+}
+```
+</code></pre>
+<p>visually-hidden 헤딩, 의미 있는 alt 텍스트, ARIA 속성을 적용해 접근성과 한다.</p>
+<hr>
+<p>BEM 기반 클래스 네이밍</p>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+
+page-header --> page-header__inner
+page-header__inner --> page-header__logo
+page-header__inner --> page-header__menu-btn
+page-header__menu-btn --> page-header__menu-icon
+page-header__inner --> page-header__nav-pc
+page-header__nav-pc --> page-header__nav-list
+page-header --> page-header__nav
+
+page-header__nav --> nav-drawer
+nav-drawer --> nav-drawer__header
+nav-drawer__header --> nav-drawer__close-btn
+nav-drawer__close-btn --> nav-drawer__close-icon
+nav-drawer --> nav-drawer__body
+nav-drawer__body --> nav-drawer__list
+nav-drawer__list --> nav-drawer__item
+nav-drawer__item --> nav-drawer__link
+
+hero --> hero__content
+hero__content --> hero__title
+hero__content --> hero__description
+hero --> hero__image
+
+profile --> profile__image
+profile --> profile__text
+profile__text --> profile__title
+profile__text --> profile__description
+
+gallery --> gallery__text
+gallery__text --> gallery__title
+gallery__text --> gallery__description
+gallery --> gallery__slider
+gallery__slider --> gallery__track
+gallery__track --> gallery__slide
+gallery --> gallery__outro
+gallery__outro --> gallery__description
+
+subscribe --> subscribe__text
+subscribe__text --> subscribe__title
+subscribe__text --> subscribe__description
+subscribe --> subscribe__form
+subscribe__form --> subscribe__input-wrapper
+subscribe__input-wrapper --> subscribe__icon
+subscribe__input-wrapper --> subscribe__input
+
+footer --> footer__brand
+footer__brand --> footer__logo
+footer__brand --> footer__social
+footer__social --> footer__social-item
+footer --> footer__menu
+footer__menu --> footer__nav
+
+modal --> modal__dim
+modal --> modal__content
+modal__content --> modal__image
+modal__content --> modal__text
+modal__text --> modal__title
+modal__text --> modal__description
+
+</div></code></pre>
+<p>블록·엘리먼트·모디파이어 역할이 드러나도록 네이밍한다. 스타일 충돌을 방지하고 유지보수를 용이하게 한다.</p>
+<hr>
+<ul>
+<li>CSS 레이어 분리 구조
+<img src="./log/1-2 모바일 퍼스트 반응형 레이아웃 구현 - css파일 링크.png" alt="히어로 섹션" width="400"></li>
+</ul>
+<p>link 태그로 외부 CSS파일 연결
+reset, base, layout, main, components 단위로 CSS를 분리한다. 전역 변수로 디자인 토큰을 관리해 일관성을 유지한다.
+브라우저가 각 CSS 파일을 병렬로 요청·캐싱
+초기 로딩과 재방문 성능이 안정적
+파일 단위로 책임이 분리되어 역할 경계가 명확해지고, 변경 영향 범위가 예측 가능합니다.
+DevTools에서 파일별로 규칙을 추적하기 쉬워 디버깅과 유지보수가 수월합니다.</p>
+<hr>
+<ul>
+<li>히어로·프로필·갤러리·구독 섹션 구현
+<img src="./log/1-2 히어로·프로필·갤러리·구독 섹션 구현.png" alt="히어로 섹션" width="400">
+<img src="./log/1-2 히어로·프로필·갤러리·구독 섹션 구현(2).png" alt="히어로 섹션" width="400"></li>
+</ul>
+<p>각 섹션을 독립적인 레이아웃 단위로 구성한다. 섹션별 제목, 콘텐츠, 버튼 구조를 명확히 분리한다.
+필요에 따라 레이아웃 배치를 위해 컨테이너를 추가한다.</p>
+<hr>
+<ul>
+<li>네비게이션 드로어
+모바일 환경에서 햄버거 버튼을 통해 슬라이드형 네비게이션을 제공한다. PC 환경에서는 헤더 네비게이션으로 전환된다.</li>
+</ul>
+<hr>
+<ul>
+<li>모달 컴포넌트
+body 직속 레이어 구조로 모달을 구현한다. 배경 차단, 포커스 흐름 제어를 고려한 구조를 적용한다.</li>
+</ul>
+<hr>
+<ul>
+<li>공용 버튼 컴포넌트
+<img src="./log/1-2 공용 버튼 컴포넌트.png" alt="히어로 섹션" width="400">
+<img src="./log/1-2 공용 버튼 컴포넌트(2).png" alt="히어로 섹션" width="400"></li>
+</ul>
+<p>디자인과 인터랙션이 동일한 버튼을 컴포넌트화한다. 섹션별로 재사용 가능하도록 설계한다.</p>
+<hr>
+<ul>
+<li>Git 커밋 단위 기록 방식
+<img src="./log/1-2 git 커밋 단위 기록 방식.png" alt="히어로 섹션" width="400"></li>
+</ul>
+<p>각 작업을 하나의 커밋 단위로 관리한다. 이슈, 원인, 해결 과정, 코드 변경 내용을 문서화해 기록 자산으로 남긴다.</p>
+<hr>
+<ul>
+<li>정적 퍼블리싱 중심 구조
+JavaScript 의존 없이 HTML·CSS 중심으로 완성한다. 이후 인터랙션 확장이 가능하도록 구조적 여지를 남긴다.</li>
+</ul>
+<hr>
+<h3 id="13-%ED%8C%80-%EA%B5%AC%EC%84%B1">1.3 팀 구성</h3>
+<table style="width:100%; border-collapse:collapse;">
+    <tbody>
+        <tr>
+            <td style="text-align:center; vertical-align:middle; height:3rem;">
+                이현규
+            </td>
+            <td style="text-align:center; vertical-align:middle; height:3rem;">
+                위니브 스승님
+            </td>
+            <td style="text-align:center; vertical-align:middle; height:3rem;">
+                GPT
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:0; height:200px;">
+                <img 
+                    src="./log/1-3  팀구성.png"
+                    style="display:block; width:100%; height:100%; object-fit:cover;"
+                    alt=""
+                >
+            </td>
+            <td style="padding:0; height:200px;">
+                <img 
+                    src="./log/1-3 위니브.png"
+                    style="display:block; width:100%; height:100%; object-fit:cover;"
+                    alt=""
+                >
+            </td>
+            <td style="padding:0; height:200px;">
+                <img 
+                    src="./log/1-3 gpt.png"
+                    style="display:block; width:100%; height:100%; object-fit:cover;"
+                    alt=""
+                >
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>본 프로젝트는 개인 단독 개발을 중심으로 진행되었으며, 설계 방향과 구현 과정에서 멘토진의 조언을 참고하였다. 개발 전반에서는 GPT를 활용해 구조 검토, 문제 해결, 문서 정리를 보조 도구로 활용하였다.</p>
+<hr>
+<h2 id="%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%B0%8F-%EB%B0%B0%ED%8F%AC">개발 환경 및 배포</h2>
+<h3 id="21-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD">2.1 개발 환경</h3>
+<ul>
+<li>HTML5, CSS3 (Semantic Markup)</li>
+<li>VS Code</li>
+</ul>
+<h3 id="22-%EB%B0%B0%ED%8F%AC-url">2.2 배포 URL</h3>
+<ul>
+<li>https://lhk0721.github.io/MiniProject-02/</li>
+</ul>
+<hr>
+<h2 id="%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%AA%85%EC%84%B8-%EB%B0%8F-%EA%B8%B0%EB%8A%A5-%EB%AA%85%EC%84%B8">요구사항 명세 및 기능 명세</h2>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[페이지 진입] --> B[스크롤 없음]
+    B -->|스크롤 발생| C[스크롤 중]
+
+    C --> D[헤더 고정]
+    C --> E[Top 버튼 표시]
+
+    E -->|Top 버튼 클릭| F[부드러운 스크롤로 최상단 이동]
+    F --> G[최상단 도달]
+
+    G --> H[헤더 고정 해제]
+    G --> I[Top 버튼 숨김]
+
+</div></code></pre>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Subscribe 버튼 클릭] --> B[이메일 유효성 검사]
+
+    B -->|유효하지 않음| C[alert 경고 표시]
+    C --> D[모달 닫힘 상태 유지]
+
+    B -->|유효함| E[모달 표시]
+    E --> F[OK! I love HODU 클릭]
+    F --> G[form 제출]
+    G --> H[모달 닫힘]
+
+</div></code></pre>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">stateDiagram-v2
+    [*] --> 초기로드
+
+    초기로드 : 헤더 비고정
+    초기로드 : Top 버튼 숨김
+    초기로드 : 모달 닫힘
+
+    초기로드 --> 스크롤중
+
+    스크롤중 : 헤더 고정
+    스크롤중 : Top 버튼 표시
+
+    스크롤중 --> 푸터근처
+
+    푸터근처 : Top 버튼 푸터 위 고정
+
+    스크롤중 --> Subscribe클릭
+    Subscribe클릭 : 이메일 유효성 검사
+
+    Subscribe클릭 --> 모달열림
+    모달열림 : 모달 표시
+
+    모달열림 --> 확인클릭
+    확인클릭 : form 제출
+    확인클릭 : 모달 닫힘
+
+    확인클릭 --> 스크롤중
+
+</div></code></pre>
+<hr>
+<h2 id="%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%A1%B0-%EB%B0%8F-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A0%95">프로젝트 구조 및 개발 일정</h2>
+<p>4.1 프로젝트 구조</p>
+<pre class="hljs"><code><div>MiniProject-02/
+├─ index.html
+├─ README.md
+│
+├─ img/
+│  ├─ arrow-left.svg
+│  ├─ arrow-right.svg
+│  ├─ blog.svg
+│  ├─ box-cat.png
+│  ├─ cat-subscribe.png
+│  ├─ facebook.svg
+│  ├─ img_1.jpg
+│  ├─ img_2.jpg
+│  ├─ img_3.jpg
+│  ├─ img_4.jpg
+│  ├─ img_5.jpg
+│  ├─ instagram.svg
+│  ├─ logo.png
+│  ├─ logo.svg
+│  ├─ mail.svg
+│  ├─ main.png
+│  ├─ menu.svg
+│  ├─ Miniproject-02.html
+│  ├─ modal-bg-img.png
+│  ├─ nos_down.exe
+│  ├─ top-btn.svg
+│  └─ youtube.svg
+│
+├─ src/
+│
+└─ style/
+   ├─ reset.css
+   ├─ base.css
+   ├─ componenets.css
+   ├─ components-temp.css
+   ├─ layout.css
+   ├─ layout-temp.css
+   ├─ main.css
+   └─ main-temp.css
+
+</div></code></pre>
+<h3 id="42-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A0%95wbs">4.2 개발 일정(WBS)</h3>
+<pre><code class="language-mermaid"><div class="mermaid">gantt
+    title MiniProject-02 커밋 단위 작업 일정표
+    dateFormat  YYYY-MM-DDTHH:mm
+    axisFormat  %m/%d %H:%M
+
+    section 12/16 (Tue) 초기 세팅
+    프로젝트 디렉토리·에셋 초기 구성        :c1, 2025-12-16T14:02, 2025-12-16T14:10
+    page-wrapper 레이아웃 구조 확정           :c2, 2025-12-16T14:10, 2025-12-16T14:20
+    header·nav 시멘틱 구조 리팩터링           :c3, 2025-12-16T14:20, 2025-12-16T14:45
+
+    section 12/16 (Tue) 메인 섹션 초안
+    공용 버튼 컴포넌트 CSS 추가               :c4, 2025-12-16T19:41, 2025-12-16T19:55
+    hero 섹션 레이아웃 초안                   :c5, 2025-12-16T20:06, 2025-12-16T20:20
+    profile 섹션 레이아웃 초안                :c6, 2025-12-16T20:59, 2025-12-16T21:05
+    gallery 섹션·슬라이더 베이스               :c7, 2025-12-16T21:05, 2025-12-16T21:20
+
+    section 12/17 (Wed)
+    subscribe 폼 구조 개선                    :c8, 2025-12-17T13:34, 2025-12-17T14:10
+    메인 하단 배경 오버레이 적용              :c9, 2025-12-17T14:10, 2025-12-17T15:30
+    modal 구조 확정                           :c10, 2025-12-17T15:30, 2025-12-17T17:14
+
+    section 12/19 (Fri) 전역·하단
+    footer 레이아웃 및 네비 구조               :c11, 2025-12-19T12:24, 2025-12-19T13:00
+    전역 디자인 변수 정의                     :c12, 2025-12-19T13:15, 2025-12-19T13:30
+    meta description 적용                     :c13, 2025-12-19T13:46, 2025-12-19T14:00
+
+    section 12/19 (Fri) 헤더·Hero
+    header/nav 구조 분리                      :c14, 2025-12-19T14:09, 2025-12-19T14:20
+    nav-drawer 스타일 완성                    :c15, 2025-12-19T14:20, 2025-12-19T14:33
+    hero 섹션 디자인 완성                     :c16, 2025-12-19T14:33, 2025-12-19T14:51
+
+    section 12/19 (Fri) 메인 섹션
+    profile 섹션 스타일 구현                  :c17, 2025-12-19T15:13, 2025-12-19T15:25
+    gallery 섹션 디자인·버튼 개선              :c18, 2025-12-19T15:29, 2025-12-19T15:46
+    subscribe 섹션 디자인 완성                :c19, 2025-12-19T16:09, 2025-12-19T16:20
+    footer·modal 디자인 보완                  :c20, 2025-12-19T16:20, 2025-12-19T16:40
+    로고 링크·alt 접근성 개선                 :c21, 2025-12-19T16:40, 2025-12-19T16:49
+
+    section 12/19 (Fri) PC 대응
+    PC 헤더 네비게이션 추가                   :c22, 2025-12-19T20:17, 2025-12-19T21:00
+    README initial commit                     :c23, 2025-12-19T21:58, 2025-12-19T22:05
+
+    section 12/20 (Sat)
+    섹션 정렬 로직 수정                       :c24, 2025-12-20T01:04, 2025-12-20T01:16
+    profile PC 미디어쿼리                     :c25, 2025-12-20T01:16, 2025-12-20T01:32
+    subscribe PC 미디어쿼리                   :c26, 2025-12-20T02:32, 2025-12-20T02:41
+    footer PC 미디어쿼리                      :c27, 2025-12-20T02:41, 2025-12-20T02:55
+    README 초안 병합                          :c28, 2025-12-20T04:09, 2025-12-20T04:10
+
+</div></code></pre>
+<hr>
+<h2 id="%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84--ui--bm">와이어프레임 / UI / BM</h2>
+<h3 id="%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84-%ED%99%94%EB%A9%B4-%EC%84%A4%EA%B3%84-%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85">와이어프레임, 화면 설계, 메인 기능 설명</h3>
+<img src="./log/5. 와이어프레임.png" alt="와이어프레임 전체 가진" width="400">
+<table style="width:100%; border-collapse:collapse;">
+<tbody>
+ <tr>
+     <td style="padding:10px 12px; text-align:left; vertical-align:middle; font-size:14px; line-height:1.6;">
+         MiniProject02-HODU<br>
+         화면 구성의 방향성과 주요 UI 흐름을 빠르게 공유하기 위한 초안입니다. 각 화면은 후속 퍼블리싱 및 기능 구현의 기준으로 사용합니다.
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:8px 12px; text-align:center; vertical-align:middle; height:3rem; font-weight:600;">
+         Main-PC
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:0; height:800px;">
+         <img src="./log/5.1 와이어프레임/프로젝트_ 랜딩페이지_PC.png" alt="메인 와이어프레임" style="display:block; width:100%; height:100% object-fit:cover;">
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:8px 12px; text-align:center; vertical-align:middle; height:3rem; font-weight:600;">
+         modal
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:0; height:400px;">
+         <img src="./log/5.1 와이어프레임/modal.svg" alt="모달열림 와이어프레임" style="display:block; width:100%;  object-fit:cover;">
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:8px 12px; text-align:center; vertical-align:middle; height:3rem; font-weight:600;">
+         Main-mobile
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:0; height:3500px;">
+         <img src="./log/5.1 와이어프레임/프로젝트_랜딩페이지_Mobile.png" alt="메인-모바일 와이어프레임" style="display:block; width:100%;  object-fit:cover;">
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:8px 12px; text-align:center; vertical-align:middle; height:3rem; font-weight:600;">
+         Navigation-drawer
+     </td>
+ </tr>
+ <tr>
+     <td style="padding:0; height:1000px;">
+         <img src="./log/5.1 와이어프레임/프로젝트_랜딩페이지_Mobile_2.png" alt="네비게이션 서랍" style="display:block; width:100%;  object-fit:cover;">
+     </td>
+ </tr>
+</tbody>
+</table>
+<hr>
+<h3 id="%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81erd">데이터베이스 모델링(ERD)</h3>
+<pre><code class="language-mermaid"><div class="mermaid">erDiagram
+    USER ||--o{ USER_AUTH : has
+    USER ||--o{ SESSION : creates
+    USER ||--o{ TRANSLATION : owns
+    USER ||--o{ FAVORITE_TRANSLATION : bookmarks
+    USER ||--o{ GLOSSARY_TERM : manages
+    USER ||--o{ SEARCH_LOG : searches
+
+    LANGUAGE ||--o{ TRANSLATION : source
+    LANGUAGE ||--o{ TRANSLATION : target
+    LANGUAGE ||--o{ GLOSSARY_TERM : language
+
+    TRANSLATION ||--o{ TRANSLATION_VERSION : versions
+    TRANSLATION ||--o{ TRANSLATION_TAG : tagged
+    TAG ||--o{ TRANSLATION_TAG : used_by
+
+    USER {
+        bigint user_id PK
+        varchar email UK
+        varchar password_hash
+        varchar display_name
+        varchar phone UK
+        varchar role
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+        timestamp last_login_at
+    }
+
+    USER_AUTH {
+        bigint auth_id PK
+        bigint user_id FK
+        varchar provider
+        varchar provider_user_key
+        varchar access_token
+        varchar refresh_token
+        timestamp token_expires_at
+        timestamp created_at
+    }
+
+    SESSION {
+        bigint session_id PK
+        bigint user_id FK
+        varchar session_token UK
+        varchar ip_address
+        varchar user_agent
+        timestamp created_at
+        timestamp expires_at
+        timestamp revoked_at
+    }
+
+    LANGUAGE {
+        smallint language_id PK
+        varchar code UK
+        varchar name
+        boolean is_supported
+    }
+
+    TRANSLATION {
+        bigint translation_id PK
+        bigint user_id FK
+        smallint source_language_id FK
+        smallint target_language_id FK
+        text source_text
+        text translated_text
+        varchar status
+        int latency_ms
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    TRANSLATION_VERSION {
+        bigint version_id PK
+        bigint translation_id FK
+        int version_no
+        text translated_text
+        varchar editor_type
+        timestamp created_at
+    }
+
+    FAVORITE_TRANSLATION {
+        bigint favorite_id PK
+        bigint user_id FK
+        bigint translation_id FK
+        timestamp created_at
+    }
+
+    TAG {
+        bigint tag_id PK
+        varchar name UK
+        timestamp created_at
+    }
+
+    TRANSLATION_TAG {
+        bigint translation_id FK
+        bigint tag_id FK
+        timestamp created_at
+    }
+
+    GLOSSARY_TERM {
+        bigint term_id PK
+        bigint user_id FK
+        smallint language_id FK
+        varchar term
+        varchar meaning
+        varchar note
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    SEARCH_LOG {
+        bigint search_id PK
+        bigint user_id FK
+        varchar query
+        varchar scope
+        int result_count
+        timestamp created_at
+    }
+
+</div></code></pre>
+<hr>
+<h3 id="%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%84%A4%EA%B3%84">아키텍처 설계</h3>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TB
+    USER[사용자 브라우저]
+    
+    USER -->|HTTPS| GITHUB_PAGES[GitHub Pages<br>정적 프론트엔드]
+
+    GITHUB_PAGES -->|API 요청| API_GATEWAY[API Gateway]
+
+    API_GATEWAY -->|인증/인가| AUTH_SERVICE[Auth Service]
+    API_GATEWAY -->|비즈니스 요청| APP_SERVER[Application Server]
+
+    AUTH_SERVICE -->|JWT 발급/검증| REDIS[Redis<br>Session / Token Cache]
+
+    APP_SERVER -->|CRUD| DATABASE[(RDBMS<br>User / Translation / Glossary)]
+    APP_SERVER -->|번역 요청| AI_ENGINE[AI Translation Engine]
+
+    APP_SERVER -->|로그 저장| LOG_SERVICE[Logging Service]
+    LOG_SERVICE -->|적재| LOG_DB[(Log Storage)]
+
+    DATABASE -->|백업| BACKUP[Backup Storage]
+
+    subgraph Frontend
+        GITHUB_PAGES
+    end
+
+    subgraph Backend
+        API_GATEWAY
+        AUTH_SERVICE
+        APP_SERVER
+        AI_ENGINE
+    end
+
+    subgraph Data
+        DATABASE
+        REDIS
+        LOG_DB
+        BACKUP
+    end
+</div></code></pre>
+<h3 id="%EC%97%90%EB%9F%AC-%EB%B0%8F-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85">에러 및 트러블슈팅</h3>
+<img src="./log/이슈.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈2.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈3.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈4.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈5.png.png" alt="히어로 섹션" width="800">
+<img src="./log/이슈5-1.png.png" alt="히어로 섹션" width="400">
+<h3 id="%EA%B0%9C%EB%B0%9C-%ED%9B%84%EA%B8%B0-%EB%B0%8F-%EB%8A%90%EB%82%80-%EC%A0%90">개발 후기 및 느낀 점</h3>
+
+</body>
+</html>
