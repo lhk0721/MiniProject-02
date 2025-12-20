@@ -635,6 +635,12 @@ flowchart TB
 ```
 
 ### 에러 및 트러블슈팅
+<img src="./log/이슈.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈2.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈3.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈4.png" alt="히어로 섹션" width="400">
+<img src="./log/이슈5.png.png" alt="히어로 섹션" width="800">
+<img src="./log/이슈5-1.png.png" alt="히어로 섹션" width="400">
 
 
 
